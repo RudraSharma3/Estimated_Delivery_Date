@@ -77,4 +77,43 @@ In e-commerce, accurate delivery estimates are crucial. This project uses machin
 ---
 
 ## 📂 Project Structure
+📁 edd-prediction/
+│
+├── data/ # Raw and processed datasets
+├── notebooks/ # Jupyter Notebooks with EDA & modeling
+├── models/ # Saved model files
+├── visuals/ # Graphs and output images
+├── src/ # Python scripts
+│ ├── preprocessing.py
+│ ├── model.py
+│ └── evaluate.py
+├── README.md # Project documentation
+└── requirements.txt # Python dependencies
+
+---
+
+## 🧠 Future Work
+
+- Integrate weather and traffic data for better predictions
+- Deploy as an API for real-time prediction
+- Build dashboard using Streamlit
+
+---
+
+## 🤝 Contributing
+
+Pull requests and suggestions are welcome! For major changes, please open an issue first.
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♂️ Author
+
+**Rudra Sharma**  
+Feel free to connect on [LinkedIn](https://www.linkedin.com) or raise an issue for questions.
 

@@ -104,14 +104,9 @@ Pull requests and suggestions are welcome! For major changes, please open an iss
 
 ---
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 ## 🙋‍♂️ Author
 
 **Rudra Sharma**  
-Feel free to connect on [LinkedIn](https://www.linkedin.com) or raise an issue for questions.
+Feel free to connect on [LinkedIn](linkedin.com/in/rudra-sharma-3508a227b) or raise an issue for questions.
 

@@ -77,7 +77,7 @@ In e-commerce, accurate delivery estimates are crucial. This project uses machin
 ---
 
 ## 📂 Project Structure
-
+```bash
 📁 edd-prediction/
 │
 ├── data/ # Raw and processed datasets
@@ -87,7 +87,7 @@ In e-commerce, accurate delivery estimates are crucial. This project uses machin
 ├── src/ # Python scripts
 ├── README.md # Project documentation
 
-
+```
 ---
 
 ## 🧠 Future Work

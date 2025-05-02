@@ -107,6 +107,6 @@ Pull requests and suggestions are welcome! For major changes, please open an iss
 
 ## 🙋‍♂️ Author
 
-**Rudra Sharma**  
+**Rudra Sharma**  [500107852]
 Feel free to connect on [LinkedIn](https://www.linkedin.com/in/rudra-sharma-3508a227b) or raise an issue for questions.
 

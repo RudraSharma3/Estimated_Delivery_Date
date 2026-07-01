@@ -1,112 +1,40 @@
-# 📦 Estimated Delivery Date (EDD) Prediction using Machine Learning
+# 📦 Estimated Delivery Date (EDD) Prediction
 
-This project focuses on predicting the **Estimated Delivery Date (EDD)** for orders in an e-commerce setting. By leveraging historical shipment and delivery data, the model forecasts how many days a shipment will take to reach the customer, thereby improving operational efficiency and customer satisfaction.
-
----
+A machine learning project focused on predicting the Estimated Delivery Date (EDD) for orders in an e-commerce setting. By leveraging historical shipment logs, the model forecasts transit days to minimize supply-chain ETA variance and improve logistics planning.
 
 ## 🚀 Project Overview
+In e-commerce, accurate delivery estimates are crucial for operational efficiency and customer satisfaction. This project uses gradient boosting techniques to predict `predicted_exact_sla` — the exact number of days between an order being shipped and its actual delivery.
 
-In e-commerce, accurate delivery estimates are crucial. This project uses machine learning techniques to predict the `predicted_exact_sla` — the number of days between shipment and actual delivery.
+## 📊 Dataset & Scope
+* **Source:** Internal e-commerce shipment and transit logs.
+* **Scale:** 500K+ historical shipment records.
+* **Core Features:** `shipment_mode`, `order_date`, `shipment_date`, `region_code`, `customer_pin`, `weight`, `volume`, and `product_category`.
+* **Target Variable:** `predicted_exact_sla` (Integer number of days in transit).
 
----
+## 🛠️ Tech Stack & Dependencies
+The entire pipeline—from raw data processing to model evaluation—is self-contained and fully documented within a single Jupyter Notebook.
+* **Language:** Python 🐍
+* **Libraries:** `pandas`, `numpy`, `scikit-learn`, `xgboost`, `matplotlib`, `seaborn`
 
-## 📊 Dataset
+## 🧠 Pipeline Architecture (Inside `EDD.ipynb`)
+1. **Data Cleaning & Preprocessing:** Handled missing values, parsed raw datetime features, and normalized tabular distributions.
+2. **Feature Engineering:** Extracted time-based and geographical constraints, introducing critical derivation features such as `shipping_duration`, `day_of_week`, and `distance_bucket`.
+3. **Hyperparameter Tuning:** Executed an exhaustive Grid Search strategy across the XGBoost Regressor space to isolate optimal learning rates, tree depths, and estimators.
+4. **Evaluation:** Diagnostic profiling using feature importance metrics, tracking predicted vs. actual SLA distributions.
 
-- **Source**: Internal e-commerce shipment logs
-- **Time Period**: June 2022 – August 2022
-- **Features** include:
-  - `shipment_mode`
-  - `order_date`
-  - `shipment_date`
-  - `region_code`
-  - `customer_pin`
-  - `weight`, `volume`, `product_category`, etc.
-- **Target**: `predicted_exact_sla` (integer number of days)
+## 📈 Model Performance Results
+The optimized XGBoost Regressor model achieved high generalizable accuracy across the validation splits:
+* **R² Score:** ~0.85
+* **Mean Absolute Error (MAE):** ~1.2 days
+* **Root Mean Squared Error (RMSE):** ~1.6 days
 
----
-
-## 🛠️ Tech Stack
-
-- **Language**: Python 🐍  
-- **Libraries**:
-  - `pandas`, `numpy` for data handling
-  - `scikit-learn` for preprocessing & modeling
-  - `xgboost` for model training
-  - `matplotlib`, `seaborn` for visualization
-
----
-
-## 🔍 Problem Statement
-
-> Predict the estimated number of days a shipment will take to reach the customer after being shipped, using historical features related to order and shipment behavior.
-
----
-
-## ✅ Methodology
-
-1. **Data Cleaning & Preprocessing**
-   - Handling missing values, date conversion, and feature engineering.
-
-2. **Exploratory Data Analysis (EDA)**
-   - Understanding trends, SLA distributions, delays, and patterns across different regions and products.
-
-3. **Feature Engineering**
-   - Created time-based and geographical features such as `shipping_duration`, `day_of_week`, and `distance_bucket`.
-
-4. **Modeling**
-   - Used **XGBoost Regressor** for accurate prediction.
-   - Tuned hyperparameters using Grid Search.
-   - Evaluated using MAE, RMSE, and R² metrics.
-
-5. **Evaluation & Interpretation**
-   - Visualized feature importance.
-   - Plotted predicted vs actual SLA distributions.
-
----
-
-## 📈 Results
-
-- **Model**: XGBoost Regressor
-- **Performance**:
-  - MAE: ~1.2 days
-  - RMSE: ~1.6 days
-  - R² Score: ~0.85
-
-> The model performs well in predicting delivery delays and is generalizable to future unseen data with similar structure.
-
----
-
-## 📂 Project Structure
-```bash
-📁 edd-prediction/
-│
-├── data/ # Raw and processed datasets
-├── notebooks/ # Jupyter Notebooks with EDA & modeling
-├── models/ # Saved model files
-├── visuals/ # Graphs and output images
-├── src/ # Python scripts
-├── README.md # Project documentation
-
+## 📂 Repository Structure
+```text
+.
+├── EDD.ipynbtext          # Monolithic notebook containing EDA, Feature Engineering, and Modeling
+└── README.md              # Project documentation
 ```
----
-
-## 🧠 Future Work
-
-- Integrate weather and traffic data for better predictions
-- Deploy as an API for real-time prediction
-- Build dashboard using Streamlit
-
----
-
-## 🤝 Contributing
-
-Pull requests and suggestions are welcome! For major changes, please open an issue first.
-
----
-
-
 ## 🙋‍♂️ Author
+Rudra Sharma
 
-**Rudra Sharma**  [500107852]
-Feel free to connect on [LinkedIn](https://www.linkedin.com/in/rudra-sharma-3508a227b) or raise an issue for questions.
-
+Feel free to connect on LinkedIn or explore my other work on GitHub.
